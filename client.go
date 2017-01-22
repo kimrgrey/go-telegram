@@ -23,6 +23,12 @@ func (cl *Client) Call(method string, params url.Values, v interface{}) {
 	decoder.Decode(v)
 }
 
+func (cl *Client) GetMe() Account {
+	resp := AccountResponse{}
+	cl.Call("getMe", url.Values{}, &resp)
+	return resp.Account
+}
+
 func (cl *Client) GetFile(fileId string) File  {
 	resp := FileResponse{}
 	cl.Call("getFile", url.Values{

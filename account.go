@@ -7,3 +7,8 @@ type Account struct {
 	UserName string `json:"username"`
 }
 
+
+type AccountResponse struct {
+	Ok bool `json:"ok"`
+	Account Account `json:"result"`
+}
