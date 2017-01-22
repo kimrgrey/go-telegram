@@ -21,7 +21,7 @@ import (
         "github.com/kimrgrey/go-telegram"
 )
  
-var client *telegram.Client = telegram.NewClient("***REMOVED***")
+var client *telegram.Client = telegram.NewClient("YOUR_BOT_KEY")
 
 func main() {
         me := client.GetMe()
